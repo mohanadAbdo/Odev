@@ -1,0 +1,23 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "launchBrowser": true,
+      "launchUrl": "https://localhost:64130",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://localhost:64130;http://localhost:64131"
+      },
+      "distributionName": ""
+    },
+    "Odev": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\mohan\\source\\repos\\Odev",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:64130;http://localhost:64131"
+    }
+  }
+}
