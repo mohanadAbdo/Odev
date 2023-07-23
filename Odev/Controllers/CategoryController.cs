@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Odev.Data;
-using Odev.Models;
+
+using WebOdev.DataAccess;
+using WebOdev.Models;
 
 namespace Odev.Controllers
 {

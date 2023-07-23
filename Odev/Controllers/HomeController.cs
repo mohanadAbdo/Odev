@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using Odev.Models;
+using WebOdev.Models;
 
 namespace Odev.Controllers
 {
