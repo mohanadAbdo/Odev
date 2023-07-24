@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using WebOdev.Models;
 
-namespace Odev.Controllers
+namespace Odev.Areas.Customer.Controllers
 {
     public class HomeController : Controller
     {

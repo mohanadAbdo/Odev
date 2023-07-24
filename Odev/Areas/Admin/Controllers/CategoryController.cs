@@ -3,14 +3,14 @@
 using WebOdev.DataAccess;
 using WebOdev.Models;
 
-namespace Odev.Controllers
+namespace Odev.Areas.Admin.Controllers
 {
     public class CategoryController : Controller
     {
         private readonly ApplicationDbContext _db;
         public CategoryController(ApplicationDbContext db)
         {
-           _db = db;
+            _db = db;
         }
         public IActionResult Index()
         {
@@ -27,12 +27,12 @@ namespace Odev.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category obj)
         {
-            if (obj.Name == obj.DisplayOrder.ToString()) 
-                {
-                ModelState.AddModelError("name","Cant match The name");
-            
-            
-                }
+            if (obj.Name == obj.DisplayOrder.ToString())
+            {
+                ModelState.AddModelError("name", "Cant match The name");
+
+
+            }
             if (ModelState.IsValid)
             {
                 _db.Categories.Add(obj);
@@ -47,13 +47,14 @@ namespace Odev.Controllers
         }  //GET
         public IActionResult Edit(int? id)
         {
-            if (id == null || id == 0) {
+            if (id == null || id == 0)
+            {
 
                 return NotFound();
             }
             var categoryFromDb = _db.Categories.Find(id);
-            
-            if (categoryFromDb== null)
+
+            if (categoryFromDb == null)
             {
                 return NotFound();
 
@@ -112,13 +113,13 @@ namespace Odev.Controllers
             {
                 return NotFound();
             }
-         
-            
-                _db.Categories.Remove(obj);
-                _db.SaveChanges();
+
+
+            _db.Categories.Remove(obj);
+            _db.SaveChanges();
             TempData["Success"] = "Category deleted";
             return RedirectToAction("Index");
-            
+
         }
 
     }
