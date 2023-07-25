@@ -12,8 +12,8 @@ using WebOdev.DataAccess;
 namespace Odev.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230724182343_addProductToDb")]
-    partial class addProductToDb
+    [Migration("20230725155413_AddProductToDatabase")]
+    partial class AddProductToDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

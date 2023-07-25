@@ -5,7 +5,7 @@
 namespace Odev.Migrations
 {
     /// <inheritdoc />
-    public partial class addProductToDb : Migration
+    public partial class AddProductToDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
