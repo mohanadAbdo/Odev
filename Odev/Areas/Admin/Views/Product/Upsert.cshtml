@@ -1,8 +1,9 @@
 ﻿@model Product
-<form method="post" asp-action="Edit">
+
+<form method="post" asp-action="Upsert">
     <div class="border p-3 mt-4">
         <div class="row pb-2">
-            <h2 class="text-primary">Edit Product</h2>
+            <h2 class="text-primary">Edit Category</h2>
        <hr />
         </div>
         <div asp-validation-summary="All"></div>
@@ -10,11 +11,15 @@
             <label asp-for="Name"></label>
             <input asp-for="Name" class="form-control" />
             <span asp-validation-for="Name" class="text-danger"></span>
-        </div> 
-
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control" ></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
         <button type="submit" class="btn-primary" style="width:150px">Update</button>
-        <a asp-controller="Product" asp-action="Index" class="btn btn-secondary "style="width:150px">Back to list</a>
-    </div> 
+        <a asp-controller="Product" asp-action="Upsert" class="btn btn-secondary "style="width:150px">Back to list</a>
+    </div>
 </form>
 
 @section Scripts{

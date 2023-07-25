@@ -1,41 +1,24 @@
-﻿@model IEnumerable<Product>
-@{
-    ViewData["Title"] = "Index";
-}
-<h1>Hello</h1>
-
-@if(TempData["Success"] != null)
-{
-    <h2>@TempData["Success"]</h2>
-}
-<partial name="_Notification" />
-<div class="container p-3">
+﻿<div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
-            <h2 class="text-primary">Category List</h2>
+            <h2 class="text-primary">Product List</h2>
         </div>
         <div class="col-6 text-end">
-            <a asp-controller="Product" asp-action="Create" class="btn btn-primary">
-                <i class="bi bi-clipboard2-plus"></i>
-                create new Product
+            <a asp-controller="Product" asp-action="Upsert" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> &nbsp; Create New Product
             </a>
-
         </div>
     </div>
+    <br /><br />
 
-    <br />
-
-
-<table class="table table-bordered tablr-stripped" style="width:100%">
-    <thead>
-        <tr>
-                <th>Product name</th>
-                <th>Product Descreption</th>
-                <th>Product Image</th>
- 
-        </tr>
-    </thead>
-
-
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Desc</th>
+                <th>Category</th>
+                <th></th>
+            </tr>
+        </thead>
     </table>
 </div>

@@ -20,7 +20,7 @@ namespace WebOdev.DataAccess.Repository
         }
         public void Add(T entity)
         {
-            throw new NotImplementedException();
+  
             dbSet.Add(entity);
         }
 
