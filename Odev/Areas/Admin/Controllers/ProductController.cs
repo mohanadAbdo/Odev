@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.AspNetCore.Mvc.Rendering;
 using WebOdev.DataAccess;
 using WebOdev.DataAccess.Repository.iRepository;
 using WebOdev.Models;
+using WebOdev.Models.ViewModels;
 
 namespace Odev.Areas.Admin.Controllers
 {
@@ -25,29 +26,38 @@ namespace Odev.Areas.Admin.Controllers
    
         public IActionResult Upsert(int? id)
         {
-            Product product = new();
+            ProductVM productVM = new()
+            {
+                Product = new(),
+                CategoryList = _unitOfWork.Category.GetAll().Select(i=>new SelectListItem
+                {
+                    Text = i.Name,
+                    Value=i.Id.ToString()
+                }),
+            };
+            
             if (id == null || id == 0)
             {
-
-                return View(product);
+                //ViewData["CategoryList"] = CategoryList;
+                return View(productVM);
             }
             else
             {
 
             }
 
-            return View(product);
+            return View(productVM);
         }
 
 
         //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Product obj)
+        public IActionResult Upsert(ProductVM obj,IFormFile file)
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.Product.Update(obj);
+                //_unitOfWork.Product.Update(obj);
                 _unitOfWork.Save();
                 TempData["Success"] = "Product edited";
                 return RedirectToAction("Index");
