@@ -21,4 +21,8 @@
     <ProjectReference Include="..\WebOdev.DataAccess\WebOdev.DataAccess.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\products\" />
+  </ItemGroup>
+
 </Project>

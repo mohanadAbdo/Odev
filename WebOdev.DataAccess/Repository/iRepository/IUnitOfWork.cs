@@ -11,5 +11,6 @@ namespace WebOdev.DataAccess.Repository.iRepository
         ICategoryRepository Category { get; }
         IProductRepository Product { get; }
         void Save();
+        
     }
 }

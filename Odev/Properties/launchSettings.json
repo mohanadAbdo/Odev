@@ -12,7 +12,7 @@
     },
     "Odev": {
       "commandName": "Project",
-      "workingDirectory": "C:\\Users\\mohan\\source\\repos\\Odev",
+      "workingDirectory": "C:\\Users\\mohan\\source\\repos\\Odev\\Odev",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

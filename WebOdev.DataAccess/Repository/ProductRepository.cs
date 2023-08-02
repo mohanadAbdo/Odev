@@ -25,10 +25,11 @@ namespace WebOdev.DataAccess.Repository
             {
                 objFromDb.Name=objFromDb.Name;
                 objFromDb.Description = objFromDb.Description;
-                if(obj.ImageUrl != null)
-                {
-                    objFromDb.ImageUrl = obj.ImageUrl;
-                }
+                objFromDb.ImageUrl = obj.ImageUrl;
+                //if (obj.ImageUrl != null)
+                //{
+                //    objFromDb.ImageUrl = obj.ImageUrl;
+                //}   
             }
         }
     }
