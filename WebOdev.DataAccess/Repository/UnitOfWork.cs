@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using WebOdev.DataAccess.Repository.iRepository;
 using WebOdev.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebOdev.DataAccess.Repository
 {

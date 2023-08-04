@@ -6,7 +6,8 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using WebOdev.DataAccess.Repository.iRepository;
-
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 namespace WebOdev.DataAccess.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
